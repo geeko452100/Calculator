@@ -77,13 +77,6 @@ const Perform_Calculation = {
     '=' : (First_Operand, Second_Operand) => Second_Operand, 
 };
 
-// This function checks for a division by zero error
-function Division_Error = {
-    if (Calculator.Display_Value == Infinity){
-        // Print an error message instead of Infinity
-        Calculator.Display_Value = "Error"
-    }
-
 function Calculator_Reset() {
     Calculator.Display_Value = '0';
     Calculator.First_Operand = null;
@@ -127,5 +120,4 @@ keys.addEventListener('click', (event) => {
     }
     Input_Digit(target.value);
     Update_Display();
-    Division_Error();
 })
